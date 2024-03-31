@@ -23,4 +23,4 @@ def upgrade() -> None:
 
 
 def downgrade() -> None:
-    op.alter_column('students', 'enrollment_day', enrolled_day='enrolled_day')
+    op.alter_column('students', 'enrollment_day', enrolled_day='Column(DateTime(), default=datetime.now())')
